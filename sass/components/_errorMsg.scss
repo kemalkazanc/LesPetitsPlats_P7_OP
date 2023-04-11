@@ -1,0 +1,17 @@
+.main {
+  .search__message {
+    width: 100%;
+    padding-top: 15px;
+    &--recipeNotFound {
+      width: 100%;
+      height: 80px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include border-rad;
+      color: $white;
+      background-color: $ustenciles;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "les-petits-plats",
+  "version": "1.0.0",
+  "description": "OC - P7 - JS - Les petits plats",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frederic-K/Les-petits-plats.git"
+  },
+  "keywords": [
+    "P7",
+    "les",
+    "petits",
+    "plats"
+  ],
+  "author": "Frédéric KREUDER",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Frederic-K/Les-petits-plats/issues"
+  },
+  "homepage": "https://github.com/Frederic-K/Les-petits-plats#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

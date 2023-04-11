@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import CSS Prefixer : compatibilité navigateur-->
+    <link rel="stylesheet" href="./css/prefixed/style.css" />
+    <!-- Import CSS de sortie Sass-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Lien Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lien Fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/24edcbc727.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/15973932905401_logoHelmet.png"
+    />
+    <title>Les petits plats</title>
+  </head>
+  <body>
+    <header>
+      <!-- Logo header -->
+      <div class="header">
+        <a
+          class="header__link"
+          href="./index.html"
+          aria-label="Lien vers l'accueil"
+        >
+          <img
+            class="header__link--logo"
+            src="./assets/15973932905401_logo.png"
+            alt="Logo du site Les petits plats"
+          />
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <!-- Barre de recherche-->
+      <section class="main__searchbar">
+        <input
+          type="text"
+          class="main__searchbar--input"
+          placeholder="Rechercher une recette"
+        />
+        <span class="main__searchbar--icon fa-solid fa-magnifying-glass"></span>
+      </section>
+      <!-- Message d'erreur : aucune recette trouvée -->
+      <section class="search__message hidden">
+        <h2 class="search__message--recipeNotFound">
+          Aucune recette ne correspond à votre critère… vous pouvez chercher «
+          tarte aux pommes », « poisson », etc...
+        </h2>
+      </section>
+      <!-- Zone de stockage des tags sélectiés -->
+      <section class="tag__parking"></section>
+      <!-- Zone de recherche par tag-->
+      <section class="tag__filter">
+        <div class="tag__filter--container">
+          <!-- Filtre ingrédients -->
+          <div
+            class="tag__filter--listbox filter__bckground--blue width-small"
+            id="filterIngredients"
+            role="listbox"
+          >
+            <div class="tag__filter--header">
+              <span class="filter__header--title">Ingredients</span>
+              <input
+                type="text"
+                class="filter__header--input filter__bckground--blue"
+                placeholder="Rechercher"
+                data-filtertype="ingredients"
+              />
+              <div class="filter__header--chevron" role="button">
+                <div
+                  class="filter__header--chevronDown"
+                  id="displayIndgredientsBtn"
+                  data-filtertype="displayIndgredientsBtn"
+                >
+                  <span class="fa-solid fa-chevron-down"></span>
+                </div>
+                <div
+                  class="filter__header--chevronUp"
+                  id="hideIngredientsBtn"
+                  data-filtertype="hideIndgredientsBtn"
+                >
+                  <span class="fa-solid fa-chevron-up"></span>
+                </div>
+              </div>
+            </div>
+            <ul class="tag__filter--list"></ul>
+          </div>
+          <!-- Filtre appareils -->
+          <div
+            class="tag__filter--listbox filter__bckground--green width-small"
+            id="filterAppliances"
+            role="listbox"
+          >
+            <div class="tag__filter--header">
+              <span class="filter__header--title">Appareils</span>
+              <input
+                type="text"
+                class="filter__header--input filter__bckground--green"
+                placeholder="Rechercher"
+                data-filtertype="appliances"
+              />
+              <div class="filter__header--chevron" role="button">
+                <div
+                  class="filter__header--chevronDown"
+                  id="displayAppliancesBtn"
+                  data-filtertype="displayAppliancesBtn"
+                >
+                  <span class="fa-solid fa-chevron-down"></span>
+                </div>
+                <div
+                  class="filter__header--chevronUp"
+                  id="hideAppliancesBtn"
+                  data-filtertype="hideAppliancesBtn"
+                >
+                  <span class="fa-solid fa-chevron-up"></span>
+                </div>
+              </div>
+            </div>
+            <ul class="tag__filter--list" id="ingredientFilterList"></ul>
+          </div>
+          <!-- Filtre ustenciles -->
+          <div
+            class="tag__filter--listbox filter__bckground--red width-small"
+            id="filterUstensils"
+          >
+            <div class="tag__filter--header">
+              <span class="filter__header--title">Ustenciles</span>
+              <input
+                type="text"
+                class="filter__header--input filter__bckground--red"
+                placeholder="Rechercher"
+                data-filtertype="ustensils"
+              />
+              <div class="filter__header--chevron" role="button">
+                <div
+                  class="filter__header--chevronDown"
+                  id="displayUstensilsBtn"
+                  data-filtertype="displayUstensilsBtn"
+                >
+                  <span class="fa-solid fa-chevron-down"></span>
+                </div>
+                <div
+                  class="filter__header--chevronUp"
+                  id="hideUstensilsBtn"
+                  data-filtertype="hideUstensilsBtn"
+                >
+                  <span class="fa-solid fa-chevron-up"></span>
+                </div>
+              </div>
+            </div>
+            <ul class="tag__filter--list"></ul>
+          </div>
+        </div>
+      </section>
+      <!-- Zone d'affichage des recettes-->
+      <section class="recipes__section"></section>
+    </main>
+    <script src="/js/api/getData.js"></script>
+    <script type="module" src="/js/index.js"></script>
+    <!-- <script src="/js/factory/tagFilter-1.js"></script> -->
+    <!-- <script src="/js/factory/TagFilters.js"></script> -->
+    <!-- <script src="/js/factory/RecipeCard.js"></script> -->
+  </body>
+</html>

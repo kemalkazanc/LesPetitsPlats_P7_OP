@@ -1,0 +1,39 @@
+* {
+    max-width: 1440px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    text-decoration: none;
+};
+
+.main {
+    padding: 0px 15px 15px 15px;
+};
+
+.hidden {
+    display: none;
+};
+
+.display-flex {
+    display: flex;
+};
+
+.width-full {
+    width: 100%;
+};
+
+.width-large {
+    max-width: 720px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.width-small {
+    max-width: 200px;
+    height: 70px;
+    margin-right: 0px;
+    margin-left: 0px;
+};
+
+.bold {
+    font-weight: bold;
+}
