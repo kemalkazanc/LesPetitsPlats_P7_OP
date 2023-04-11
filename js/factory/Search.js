@@ -147,6 +147,11 @@ export default class Search {
     this.arrayRecipeCollection = this.cardSection;
   }
 
+  // / Fonction qui permet de mettre la première lettre d'un mot en majuscule ///
+  _setUpperCaseFirstChar(string) {
+    return string && string[0].toUpperCase() + string.slice(1);
+  }
+
   /// Fonction qui permet de mettre la 1er lettre en majuscule ///
   _setIngredientsFilterList() {
     this.arrayAllIngredients = [];
